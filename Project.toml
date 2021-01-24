@@ -4,6 +4,8 @@ authors = ["Murat Koptur <mkoptur3@gmail.com>"]
 version = "0.1.0"
 
 [deps]
+Debugger = "31a5f54b-26ea-5ae9-a837-f05ce5417438"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [compat]
