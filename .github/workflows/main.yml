@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Version to register or component to bump
+        required: true
+        
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1.0.0
+    - uses: julia-actions/setup-julia@v1
+      with:
+        version: 1.5.3
+    - uses: julia-actions/julia-buildpkg@latest
+    - uses: julia-actions/julia-runtest@latest
+    - uses: julia-actions/RegisterAction@latest
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: JuliaRegistries/TagBot@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
