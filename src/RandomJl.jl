@@ -1,4 +1,4 @@
-module NumericalAlgorithmsJulia
+module RandomJl
 
 function FindRoot1D(f::Function, p0::Float64, p1::Float64, N0::Int64, tol::Float64)
     i = 1
