@@ -1,4 +1,4 @@
-using RandomJl
+using NumericalAlgorithms
 using Test
 
 @testset "Root finding" begin
@@ -7,6 +7,6 @@ using Test
     p1 = 2.0
     tol = 1e-5
     N0 = 100
-    res = RandomJl.FindRoot1D(f1, p0, p1, N0, tol)
+    res = NumericalAlgorithms.FindRoot1D(f1, p0, p1, N0, tol)
     @test round(res, digits=5) == 1.61803
 end;

@@ -1,7 +1,10 @@
-name = "RandomJl"
+name = "NumericalAlgorithms"
 uuid = "3b47cccd-2e0f-43d2-aaa1-0b61cbee3591"
 authors = ["Murat Koptur <mkoptur3@gmail.com>"]
 version = "0.1.0"
 
 [deps]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+julia = "1.5"
