@@ -7,7 +7,7 @@ using Test
     p1 = 2.0
     tol = 1e-5
     N0 = 100
-    res = NumericalAlgorithms.FindRoot1D(f1, p0, p1, N0, tol)
+    res = FindRoot1D(f1, p0, p1, N0, tol)
     @test round(res, digits=5) == 1.61803
 
     g1(x) = 3x[1] - cos(x[2] * x[3]) - 1 / 2
@@ -33,8 +33,30 @@ using Test
     p0 = [0.1, 0.1, -0.1]
     tol = 1e-5
     N0 = 100
-    res = NumericalAlgorithms.FindRootND(s1, grads1, p0, N0, tol)
+    res = FindRootND(s1, grads1, p0, N0, tol)
     @test round(res[1], digits=5) == 0.5 && 
           round(res[2], digits=5) == 0.0 &&
           round(res[3], digits=5) == -0.5236
 end;
+
+@testset "Differentiation" begin
+    x1::Dual = Dual(4, 1)
+    y1::Dual = x1 * Dual(3) + Dual(2)
+    @test y1.d == 3
+
+    x2::Dual = Dual(10, 1)
+    y2::Dual = Dual(5) * x2^2.0 + x2 * Dual(4) + Dual(1)
+    @test y2.d == 104
+
+    x3::Dual = Dual(1, 1)
+    y3::Dual = Dual(0.5)
+    z3::Dual = Dual(2.0)
+    f::Dual = z3 * (x3 + y3)^2.0
+    @test f.d == 6
+
+    x4::Dual = Dual(1.0, [1,0,0])
+    y4::Dual = Dual(0.5, [0,1,0])
+    z4::Dual = Dual(2.0, [0,0,1])
+    f2::Dual = z4 * (x4 + y4)^2.0
+    @test f2.d == [6.0, 6.0, 2.25]
+end
