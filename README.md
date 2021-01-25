@@ -12,9 +12,10 @@ Currently implemented:
 * Root finding algorithms
     * [Secant method](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/038b17319fbaec8133631e59c13e99ad6787af3f/src/RootFinding.jl#L3) 
     * [Broyden's method](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/038b17319fbaec8133631e59c13e99ad6787af3f/src/RootFinding.jl#L19)
+* Differentation
+    * [Automatic differentation via dual numbers](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/0e8b9d5150a734a67033548762a57e26f9725fe3/src/Differentiation.jl#L1)
 
 *Todo*
-* Differentation
 * Integration
 * Optimization
 * Probability Distributions
@@ -35,3 +36,4 @@ Email: [muratkoptur@yandex.com](mailto:muratkoptur@yandex.com?subject=NumericalA
 ## References
 
 * Press, William H., Teukolsky, S. A., Vetterling, W. T., & Flannery, B. P. (2007). Numerical Recipes 3rd Edition: The Art of Scientific Computing (3rd ed.). Cambridge, England: Cambridge University Press.
+* Kochenderfer, M. J., & Wheeler, T. A. (2019). Algorithms for Optimization (The MIT Press) (Illustrated ed.). The MIT Press.
