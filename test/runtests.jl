@@ -8,7 +8,15 @@ using Test
     tol = 1e-5
     N0 = 100
     res = FindRoot1D(f1, p0, p1, N0, tol)
-    @test round(res, digits=5) == 1.61803
+    @test res ≈ 1.61803 atol = 1e-5
+
+    f2(x::Float64)::Float64 = sqrt(x + 2) / x
+    p0 = -0.5
+    p1 = 2.0
+    tol = 1e-5
+    N0 = 100
+    res = FindRoot1D(f2, p0, p1, N0, tol)
+    @test isnan(res)
 
     g1(x) = 3x[1] - cos(x[2] * x[3]) - 1 / 2
     g2(x) = x[1]^2 - 81(x[2] + 0.1)^2 + sin(x[3]) + 1.06
@@ -34,9 +42,9 @@ using Test
     tol = 1e-5
     N0 = 100
     res = FindRootND(s1, grads1, p0, N0, tol)
-    @test round(res[1], digits=5) == 0.5
-    @test round(res[2], digits=5) == 0.0
-    @test round(res[3], digits=5) == -0.5236
+    @test res[1] ≈ 0.5 atol = 1e-5
+    @test res[2] ≈ 0.0 atol = 1e-5
+    @test res[3] ≈ -0.5236 atol = 1e-5
 end;
 
 @testset "Differentiation" begin
@@ -61,4 +69,16 @@ end;
     @test f2.d[1] == 6.0 
     @test f2.d[2] == 6.0
     @test f2.d[3] == 2.25
+
+    x5::Dual = Dual(5, 1)
+    f3::Dual = Dual(1) - (Dual(1) / x5) + exp(sqrt(x5))
+    @test f3.d ≈ 2.13217 atol = 1e-5
+
+    x6::Dual = Dual(2, 1)
+    f4::Dual = log(x6) - sin(x6) * tan(x6) + cos(x6)
+    @test f4.d ≈ -6.56924 atol = 1e-5
+
+    x7::Dual = Dual(0, 1)
+    f5::Dual = asin(x7) - acos(x7) * atan(x7)
+    @test f5.d ≈ -0.57080 atol = 1e-5
 end
