@@ -1,6 +1,7 @@
 # NumericalAlgorithms.jl
 
 ![CI](https://github.com/mrtkp9993/NumericalAlgorithms.jl/workflows/CI/badge.svg)
+[![codecov](https://codecov.io/gh/mrtkp9993/NumericalAlgorithms.jl/branch/main/graph/badge.svg?token=7MBMLCFILV)](https://codecov.io/gh/mrtkp9993/NumericalAlgorithms.jl)
 [![GitHub license](https://img.shields.io/github/license/mrtkp9993/NumericalAlgorithms.jl)](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/main/LICENSE)
 
 Numerical algorithms implemented in Julia.
