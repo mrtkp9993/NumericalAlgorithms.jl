@@ -34,9 +34,9 @@ using Test
     tol = 1e-5
     N0 = 100
     res = FindRootND(s1, grads1, p0, N0, tol)
-    @test round(res[1], digits=5) == 0.5 && 
-          round(res[2], digits=5) == 0.0 &&
-          round(res[3], digits=5) == -0.5236
+    @test round(res[1], digits=5) == 0.5
+    @test round(res[2], digits=5) == 0.0
+    @test round(res[3], digits=5) == -0.5236
 end;
 
 @testset "Differentiation" begin
@@ -58,5 +58,7 @@ end;
     y4::Dual = Dual(0.5, [0,1,0])
     z4::Dual = Dual(2.0, [0,0,1])
     f2::Dual = z4 * (x4 + y4)^2.0
-    @test f2.d == [6.0, 6.0, 2.25]
+    @test f2.d[1] == 6.0 
+    @test f2.d[2] == 6.0
+    @test f2.d[3] == 2.25
 end
