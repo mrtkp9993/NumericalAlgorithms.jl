@@ -1,8 +1,8 @@
 using LinearAlgebra
 
-function FindRoot1D(f::Function, p0::Float64, p1::Float64, N0::Int64, tol::Float64)
+function FindRoot1D(f::Function, p0::Float64, p1::Float64, NMAX::UInt64, tol::Float64)
     i = 1
-    while i <= N0
+    while i <= NMAX
         p2 = p0 - f(p0) * ((p1 - p0) / (f(p1) - f(p0)))
         if abs(p2 - p1) < tol
             println("Root found after $i iterations, root: $p2")
@@ -16,9 +16,9 @@ function FindRoot1D(f::Function, p0::Float64, p1::Float64, N0::Int64, tol::Float
     return NaN
 end
 
-function FindRootND(f::Function, jb::Function, p0::Array{Float64,1}, N0::Int64, tol::Float64)
+function FindRootND(f::Function, jb::Function, p0::Array{Float64,1}, NMAX::UInt64, tol::Float64)
     i = 1
-    while i <= N0
+    while i <= NMAX
         J = jb(p0)
         fo = f(p0)
         dx = -J \ fo

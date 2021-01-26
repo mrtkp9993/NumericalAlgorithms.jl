@@ -6,16 +6,16 @@ using Test
     p0 = 1.5
     p1 = 2.0
     tol = 1e-5
-    N0 = 100
-    res = FindRoot1D(f1, p0, p1, N0, tol)
+    NMAX::UInt64 = 100
+    res = FindRoot1D(f1, p0, p1, NMAX, tol)
     @test res ≈ 1.61803 atol = 1e-5
 
     f2(x::Float64)::Float64 = sqrt(x + 2) / x
     p0 = -0.5
     p1 = 2.0
     tol = 1e-5
-    N0 = 100
-    res = FindRoot1D(f2, p0, p1, N0, tol)
+    # NMAX::UInt64 = 100
+    res = FindRoot1D(f2, p0, p1, NMAX, tol)
     @test isnan(res)
 
     g1(x) = 3x[1] - cos(x[2] * x[3]) - 1 / 2
@@ -40,8 +40,8 @@ using Test
 
     p0 = [0.1, 0.1, -0.1]
     tol = 1e-5
-    N0 = 100
-    res = FindRootND(s1, grads1, p0, N0, tol)
+    # NMAX::UInt64 = 100
+    res = FindRootND(s1, grads1, p0, NMAX, tol)
     @test res[1] ≈ 0.5 atol = 1e-5
     @test res[2] ≈ 0.0 atol = 1e-5
     @test res[3] ≈ -0.5236 atol = 1e-5
@@ -81,4 +81,13 @@ end;
     x7::Dual = Dual(0, 1)
     f5::Dual = asin(x7) - acos(x7) * atan(x7)
     @test f5.d ≈ -0.57080 atol = 1e-5
+end
+
+@testset "Integration" begin
+    a = 0.0
+    b = 3.14159265358979323846
+    n::UInt64 = 100000
+    f1(x::Float64)::Float64 = x^2 + cos(x)
+    res = CalcSingleIntegral(f1, a, b, n)
+    @test res ≈ 10.335 atol = 1e-3
 end
