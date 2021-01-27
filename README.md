@@ -19,9 +19,13 @@ Currently implemented:
     * [Broyden's method](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/038b17319fbaec8133631e59c13e99ad6787af3f/src/RootFinding.jl#L19)
 * Differentation
     * [Automatic differentiation via dual numbers](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/0e8b9d5150a734a67033548762a57e26f9725fe3/src/Differentiation.jl#L1)
+* Integration
+   * [Composite Simpson - One dim.](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/59ab2397869ecf563e8d3c41aeccc1210c2f3d1e/src/Integration.jl#L12)
+   * [Double Simpson - Two dim.](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/59ab2397869ecf563e8d3c41aeccc1210c2f3d1e/src/Integration.jl#L46)
+   * [WIP] [Gaussian Triple Integral - Three dim.]
+   * [WIP] [Monte Carlo Integration]()
 
 *Todo*
-* Integration
 * Optimization
 * Probability Distributions
 * Stochastic process & SDEs
