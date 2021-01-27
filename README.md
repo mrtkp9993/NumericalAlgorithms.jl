@@ -6,6 +6,10 @@
 
 Numerical algorithms implemented in Julia.
 
+## Installation
+
+Install the package with ```add https://github.com/mrtkp9993/NumericalAlgorithms.jl``` in package mode (```]```).
+
 ## Algorithms
 
 Currently implemented:

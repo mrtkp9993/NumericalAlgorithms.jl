@@ -1,3 +1,8 @@
+"""
+    CalcSingleIntegral(f::Function, a::Real, b::Real, NMAX::UInt64)
+
+Compute integral of f function from a to b.
+"""
 function CalcSingleIntegral(f::Function, a::Real, b::Real, NMAX::UInt64)
     xi = 0.0
     h = (b - a) / NMAX
