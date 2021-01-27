@@ -13,6 +13,6 @@ include("Differentiation.jl")
 include("Integration.jl")
 include("RootFinding.jl")
 
-export FindRoot1D, FindRootND, Dual, CalcSingleIntegral
+export FindRoot1D, FindRootND, Dual, CalcSingleIntegral, CalcDoubleIntegral
 
 end # module

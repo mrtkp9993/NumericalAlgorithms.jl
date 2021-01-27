@@ -86,8 +86,18 @@ end
 @testset "Integration" begin
     a = 0.0
     b = 3.14159265358979323846
-    n::UInt64 = 100000
+    n::UInt64 = 10
     f1(x::Float64)::Float64 = x^2 + cos(x)
     res = CalcSingleIntegral(f1, a, b, n)
     @test res ≈ 10.335 atol = 1e-3
+
+    m1::UInt64 = 10
+    n1::UInt64 = 10
+    a1 = 0
+    b1 = 1
+    c1(x) = x
+    d1(x) = 2 * x
+    f2(x, y) = y^2 + x^3
+    res = CalcDoubleIntegral(f2, a1, b1, c1, d1, m1, n1)
+    @test res ≈ 0.783346 atol = 1e-6
 end
