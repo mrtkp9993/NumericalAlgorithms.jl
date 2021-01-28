@@ -25,7 +25,7 @@ Currently implemented:
    * [WIP] [Monte Carlo Integration]()
 * Random Number Generators (RNGs)
     * Pseudo-random numbers
-        * [WIP] [Lagged Fibonacci generator]()
+        * [Lagged Fibonacci generator](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/279a50635734098c8a72f3c3ca79393a69be4900/src/Random.jl#L3)
         * [WIP] [RANMAR]()
     * [WIP] Quasi-random numbers 
 
