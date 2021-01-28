@@ -27,3 +27,5 @@ jobs:
     - uses: codecov/codecov-action@v1.2.1
       with:
         file: lcov.info
+    - uses: julia-actions/RegisterAction@v0.2.0
+    - uses: JuliaRegistries/TagBot@v1.10.0
