@@ -11,7 +11,6 @@ LFG() = LFG(24, 55, 2^32, [rand(Int) % 2^32 for i = 1:55])
 LFG(p, q, m) = LPG(p, q, m, [rand(Int) % m for i = 1:q])
 
 function Base.rand(rng::LFG)
-    i = length(rng.s)
     new = (rng.s[rng.p] + rng.s[rng.q]) % rng.m
     popfirst!(rng.s)
     push!(rng.s, new)
