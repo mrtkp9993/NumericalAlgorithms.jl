@@ -11,8 +11,12 @@ module NumericalAlgorithms
 
 include("Differentiation.jl")
 include("Integration.jl")
+include("Random.jl")
 include("RootFinding.jl")
 
-export FindRoot1D, FindRootND, Dual, CalcSingleIntegral, CalcDoubleIntegral
+export FindRoot1D, FindRootND
+export Dual
+export CalcSingleIntegral, CalcDoubleIntegral
+export LFG
 
 end # module

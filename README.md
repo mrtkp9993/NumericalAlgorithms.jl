@@ -22,8 +22,12 @@ Currently implemented:
 * Integration
    * [Composite Simpson - One dim.](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/59ab2397869ecf563e8d3c41aeccc1210c2f3d1e/src/Integration.jl#L12)
    * [Double Simpson - Two dim.](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/59ab2397869ecf563e8d3c41aeccc1210c2f3d1e/src/Integration.jl#L46)
-   * [WIP] [Gaussian Triple Integral - Three dim.]
    * [WIP] [Monte Carlo Integration]()
+* Random Number Generators (RNGs)
+    * Pseudo-random numbers
+        * [WIP] [Lagged Fibonacci generator]()
+        * [WIP] [RANMAR]()
+    * [WIP] Quasi-random numbers 
 
 *Todo*
 * Optimization
@@ -49,3 +53,4 @@ Email: [muratkoptur@yandex.com](mailto:muratkoptur@yandex.com?subject=NumericalA
 * Burden, R. L., & Faires, D. J. (2010). Numerical Analysis (9th ed.). Cengage Learning.
 * Zwillinger, D. (2018). CRC Standard Mathematical Tables and Formulas, 33rd Edition. Amsterdam University Press.
 * Stoop, R., Hardy, A., Hardy, Y., & Steeb, W. (2004). Problems and Solutions in Scientific Computing with C++ and Java Simulations. World Scientific Publishing Company.
+* Weinzierl, S. (2000, June 23). Introduction to Monte Carlo methods. ArXiv.Org. https://arxiv.org/abs/hep-ph/0006269.
