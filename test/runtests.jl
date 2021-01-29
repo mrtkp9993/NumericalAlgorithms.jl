@@ -85,7 +85,7 @@ end
 
 @testset "Integration" begin
     a = 0.0
-    b = 3.14159265358979323846
+    b = C_PI
     n::UInt64 = 10
     f1(x::Float64)::Float64 = x^2 + cos(x)
     res = CalcSingleIntegral(f1, a, b, n)
