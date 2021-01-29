@@ -8,8 +8,8 @@ mutable struct LFG <: RNG # Lagged Fibonacci generator
     op
 end
 
-LFG() = LFG(24, 55, 2^32, [rand(Int) % 2^32 for i = 1:55], +)
-LFG(p, q, m) = LPG(p, q, m, [rand(Int) % m for i = 1:q], +)
+LFG() = LFG(24, 55, 2^32, [rand(UInt) % 2^32 for i = 1:55], +)
+LFG(p, q, m) = LPG(p, q, m, [rand(UInt) % m for i = 1:q], +)
 
 function Base.rand(rng::LFG)
     new = rng.op(rng.s[rng.p], rng.s[rng.q]) % rng.m
@@ -45,8 +45,8 @@ function ranseq(t) # helper function for RANMAR
 end
 
 function RANMAR()
-    r = LFG(97, 33, 2^24, [rand(Int) % 2^32 for i = 1:97], -)
-    t = [rand(Int) % 2^24]
+    r = LFG(97, 33, 2^24, [rand(UInt) % 2^32 for i = 1:97], -)
+    t = [rand(UInt) % 2^24]
     for i = 2:97
         push!(t, ranseq(t[i - 1]))
     end
