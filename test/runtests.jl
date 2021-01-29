@@ -107,13 +107,13 @@ end
     q = 7
     m = 10
     s = [6,4,2,1,8,9,3]
-    rng1 = LFG(p, q, m, s)
+    rng1 = LFG(p, q, m, s, +)
     @test rand(rng1, 25) == [5, 6, 4, 3, 6, 1, 7, 1, 4, 0, 1, 8, 9, 3, 3, 4, 2, 1, 4, 7, 1, 3, 4, 8, 5]
 
     p = 3
     q = 7
     m = 256
     s = [8,6,7,5,3,0,9]
-    rng2 = LFG(p, q, m, s)
+    rng2 = LFG(p, q, m, s, +)
     @test rand(rng2) == 16
 end
