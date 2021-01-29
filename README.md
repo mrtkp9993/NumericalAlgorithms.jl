@@ -26,7 +26,7 @@ Currently implemented:
 * Random Number Generators (RNGs)
     * Pseudo-random numbers
         * [Lagged Fibonacci generator](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/279a50635734098c8a72f3c3ca79393a69be4900/src/Random.jl#L3)
-        * [WIP] [RANMAR]()
+        * [RANMAR](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/5d7a65acb540707fdd48adc60cf705841ae08efa/src/Random.jl#L32)
     * [WIP] Quasi-random numbers 
 
 *Todo*
@@ -35,6 +35,12 @@ Currently implemented:
 * Stochastic process & SDEs
 * ...
 * More comments & self-commenting code
+
+## Visual tests for RNGs
+
+![lfg1000](figs/lfg_test_1000.png)
+
+![ranmar1000](figs/ranmar_test_1000.png)
 
 ## License
 
