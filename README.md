@@ -29,7 +29,7 @@ Currently implemented:
         * [RANMAR](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/5d7a65acb540707fdd48adc60cf705841ae08efa/src/Random.jl#L32)
     * [WIP] Quasi-random numbers
 * Statistical Tests
-    * Wald–Wolfowitz runs test
+    * [Wald–Wolfowitz runs test](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/9fe1ddeb3e6d17b9ef461a9142731296ee559a67/src/StatisticalTests.jl#L3)
 
 *Todo*
 * Optimization
