@@ -22,7 +22,7 @@ export C_SQRT1_2, C_SQRTPI, C_SQRT2PI
 export FindRoot1D, FindRootND
 export Dual
 export CalcSingleIntegral, CalcDoubleIntegral
-export LFG, RANMAR
+export LFG, RANMAR, vanderCorputSeq
 export RunsTest
 
 end # module

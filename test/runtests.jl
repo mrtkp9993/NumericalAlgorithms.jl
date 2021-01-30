@@ -117,6 +117,13 @@ end
     s = [8,6,7,5,3,0,9]
     rng2 = LFG(p, q, m, s, +)
     @test rand(rng2) == 16
+
+    seq1 = [vanderCorputSeq(i, 2) for i = 1:9]
+    expected_seq1 = [0.5, 0.25, 0.75, 0.125, 0.625, 0.375, 0.875, 0.0625, 0.5625]
+    seq2 = [vanderCorputSeq(i, 3) for i = 1:9]
+    expected_seq2 = [1 / 3, 2 / 3, 1 / 9, 4 / 9, 7 / 9, 2 / 9, 5 / 9, 8 / 9, 1 / 27]
+    @test seq1 == expected_seq1
+    @test seq2 ≈  expected_seq2 atol = 1e-3
 end
 
 @testset "Runs test for randomness" begin

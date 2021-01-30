@@ -66,3 +66,14 @@ function Base.rand(rng::RANMAR)
     push!(rng.s, snew)
     snew
 end
+
+function vanderCorputSeq(n, b)
+    bn = 0
+    j = 0
+    while n != 0
+        bn += mod(n, b) / (b^(j + 1))
+        n = floor(n / b)
+        j += 1
+    end
+    bn
+end
