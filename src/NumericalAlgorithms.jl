@@ -14,6 +14,7 @@ include("Differentiation.jl")
 include("Integration.jl")
 include("Random.jl")
 include("RootFinding.jl")
+include("StatisticalTests.jl")
 
 export C_E, C_LOG2E, C_LOG10E, C_LN2, C_LN10, C_PI
 export C_PI_2, C_1_PI, C_2_PI, C_2_SQRTPI, C_SQRT2
@@ -22,5 +23,6 @@ export FindRoot1D, FindRootND
 export Dual
 export CalcSingleIntegral, CalcDoubleIntegral
 export LFG, RANMAR
+export RunsTest
 
 end # module

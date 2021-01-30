@@ -27,11 +27,12 @@ Currently implemented:
     * Pseudo-random numbers
         * [Lagged Fibonacci generator](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/279a50635734098c8a72f3c3ca79393a69be4900/src/Random.jl#L3)
         * [RANMAR](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/5d7a65acb540707fdd48adc60cf705841ae08efa/src/Random.jl#L32)
-    * [WIP] Quasi-random numbers 
+    * [WIP] Quasi-random numbers
+* Statistical Tests
+    * Wald–Wolfowitz runs test
 
 *Todo*
 * Optimization
-* Probability Distributions
 * Stochastic process & SDEs
 * ...
 * More comments & self-commenting code

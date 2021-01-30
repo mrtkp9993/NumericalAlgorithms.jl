@@ -1,4 +1,5 @@
 using NumericalAlgorithms
+using Statistics
 using Test
 
 @testset "Root finding" begin
@@ -116,4 +117,18 @@ end
     s = [8,6,7,5,3,0,9]
     rng2 = LFG(p, q, m, s, +)
     @test rand(rng2) == 16
+end
+
+@testset "Runs test for randomness" begin
+    rng1 = LFG()
+    rndnums_rng1 = rand(rng1, 20000)
+    z1 = RunsTest(rndnums_rng1)
+    z1 = round(z1, digits=2)
+    @test -2.58 < z1 < 2.58
+
+    rng2 = RANMAR()
+    rndnums_rng2 = [rand(rng2) for i = 1:20000]
+    z2 = RunsTest(rndnums_rng2)
+    z2 = round(z2, digits=2)
+    @test -2.58 < z1 < 2.58    
 end
