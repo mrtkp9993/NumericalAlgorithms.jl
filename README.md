@@ -61,3 +61,4 @@ Email: [muratkoptur@yandex.com](mailto:muratkoptur@yandex.com?subject=NumericalA
 * Zwillinger, D. (2018). CRC Standard Mathematical Tables and Formulas, 33rd Edition. Amsterdam University Press.
 * Stoop, R., Hardy, A., Hardy, Y., & Steeb, W. (2004). Problems and Solutions in Scientific Computing with C++ and Java Simulations. World Scientific Publishing Company.
 * Weinzierl, S. (2000, June 23). Introduction to Monte Carlo methods. ArXiv.Org. https://arxiv.org/abs/hep-ph/0006269.
+* Lists of small primes. (2020). The PrimePages: Prime Number Research & Records. https://primes.utm.edu/lists/small/.

@@ -1,15 +1,24 @@
 abstract type RNG end
 
-mutable struct LFG <: RNG # Lagged Fibonacci generator
+"Struct for Lagged Fibonacci Generator"
+mutable struct LFG <: RNG 
+    "first lag"
     p
+    "second lag"
     q
+    "modulo"
     m
+    "state of RNG"
     s
+    "Operation (+,-,*)"
     op
 end
 
+"Constructor for LFG with default parameter values"
 LFG() = LFG(24, 55, 2^32, [rand(UInt) % 2^32 for i = 1:55], +)
+"Constructor for LFG with user supplied values, p, q, m"
 LFG(p, q, m) = LPG(p, q, m, [rand(UInt) % m for i = 1:q], +)
+
 
 function Base.rand(rng::LFG)
     new = rng.op(rng.s[rng.p], rng.s[rng.q]) % rng.m
@@ -29,13 +38,15 @@ function Base.rand(rng::LFG, n::Int)
     rnd
 end
 
+"Struct for RANMAR composite rng"
 mutable struct RANMAR <: RNG # RANMAR 
     r::LFG
     t
     s
 end
 
-function ranseq(t) # helper function for RANMAR
+"t_i sequence for RANMAR"
+function ranseq(t) 
     if t - 7654321 >= 0
         t = t - 7654321
     else
@@ -67,6 +78,7 @@ function Base.rand(rng::RANMAR)
     snew
 end
 
+"van der Corput sequence, simplest one-dimensional low-discrepancy sequence over the unit interval."
 function vanderCorputSeq(n, b)
     bn = 0
     j = 0
