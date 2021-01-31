@@ -23,7 +23,7 @@ export primes_1000
 export FindRoot1D, FindRootND
 export Dual
 export CalcSingleIntegral, CalcDoubleIntegral
-export LFG, RANMAR, vanderCorputSeq
+export LFG, RANMAR, vanderCorputSeq, haltonSeq
 export RunsTest
 
 end # module

@@ -79,13 +79,19 @@ function Base.rand(rng::RANMAR)
 end
 
 "van der Corput sequence, simplest one-dimensional low-discrepancy sequence over the unit interval."
-function vanderCorputSeq(n, b)
-    bn = 0
+function vanderCorputSeq(i, b)
+    bi = 0
     j = 0
-    while n != 0
-        bn += mod(n, b) / (b^(j + 1))
-        n = floor(n / b)
+    while i != 0
+        bi += mod(i, b) / (b^(j + 1))
+        i = floor(i / b)
         j += 1
     end
-    bn
+    bi
+end
+
+"Halton sequence"
+function haltonSeq(i, m)
+    hseq = [vanderCorputSeq(i, primes_1000[j]) for j = 1:m]
+    hseq
 end
