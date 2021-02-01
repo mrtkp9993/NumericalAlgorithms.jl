@@ -28,6 +28,11 @@ Currently implemented:
         * [Lagged Fibonacci generator](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/279a50635734098c8a72f3c3ca79393a69be4900/src/Random.jl#L3)
         * [RANMAR](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/5d7a65acb540707fdd48adc60cf705841ae08efa/src/Random.jl#L32)
     * [WIP] Quasi-random numbers
+        * [van der Corput sequences]()
+        * [Halton sequences]()
+        * [Faure sequences]()
+        * [WIP] [Sobol sequences]()
+
 * Statistical Tests
     * [Wald–Wolfowitz runs test](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/9fe1ddeb3e6d17b9ef461a9142731296ee559a67/src/StatisticalTests.jl#L3)
 

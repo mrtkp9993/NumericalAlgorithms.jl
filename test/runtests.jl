@@ -128,6 +128,12 @@ end
     hseq1 = haltonSeq(3, 4)
     expected_hseq1 = [0.75, 0.11, 0.6, 0.42]
     @test hseq1 ≈ expected_hseq1 atol = 1e-2
+
+    fseq1 = faureSeq(10, 5, 7)
+    expected_fseq11 = [0.14286, 0.28571, 0.42857, 0.57143, 0.71429, 0.85714, 0.59184, 0.73469, 0.87755, 0.020408]
+    expected_fseq12 = [0.14286, 0.28571, 0.42857, 0.57143, 0.71429, 0.85714, 0.73469, 0.87755, 0.020408, 0.16327]
+    @test fseq1[:, 1] ≈ expected_fseq11 atol = 1e-3
+    @test fseq1[:, 2] ≈ expected_fseq12 atol = 1e-3
 end
 
 @testset "Runs test for randomness" begin

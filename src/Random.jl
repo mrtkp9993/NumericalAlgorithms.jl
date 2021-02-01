@@ -1,3 +1,5 @@
+include("Misc.jl")
+
 abstract type RNG end
 
 "Struct for Lagged Fibonacci Generator"
@@ -45,16 +47,6 @@ mutable struct RANMAR <: RNG # RANMAR
     s
 end
 
-"t_i sequence for RANMAR"
-function ranseq(t) 
-    if t - 7654321 >= 0
-        t = t - 7654321
-    else
-        t = t - 7654321 + 2^24 - 3
-    end
-    return t
-end
-
 function RANMAR()
     r = LFG(97, 33, 2^24, [rand(UInt) % 2^32 for i = 1:97], -)
     t = [rand(UInt) % 2^24]
@@ -68,7 +60,7 @@ function RANMAR()
     t = t[97]
     RANMAR(r, t, s)
 end
-
+    
 function Base.rand(rng::RANMAR)
     rnew = rand(rng.r)
     tnew = ranseq(rng.t)
@@ -94,4 +86,29 @@ end
 function haltonSeq(i, m)
     hseq = [vanderCorputSeq(i, primes_1000[j]) for j = 1:m]
     hseq
+end
+
+"Faure sequence"
+function faureSeq(nb, m, b)
+    bn = zeros(nb, 2)
+    for l = 1:nb
+        a = decompose(l, b)
+        sm = size(a, 1)
+
+        matTrans = zeros(sm, sm)
+        for i = 1:sm
+            for j = 1:sm
+                matTrans[j,i] = binomial(i - 1, j - 1)
+            end
+        end
+
+        a = (matTrans^(m - 1) * a) .% b
+        aplus1 = (matTrans * a) .% b
+
+        for f = 1:sm
+            bn[l,1] = bn[l,1] + a[f,1] / b^(f)
+            bn[l,2] = bn[l,2] + aplus1[f,1] / b^(f)
+        end
+    end
+    bn
 end
