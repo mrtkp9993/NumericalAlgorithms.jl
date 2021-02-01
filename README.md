@@ -15,26 +15,26 @@ Install the package with ```add https://github.com/mrtkp9993/NumericalAlgorithms
 Currently implemented:
 
 * Root finding algorithms
-    * [Secant method](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/038b17319fbaec8133631e59c13e99ad6787af3f/src/RootFinding.jl#L3) 
-    * [Broyden's method](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/038b17319fbaec8133631e59c13e99ad6787af3f/src/RootFinding.jl#L19)
+    * Secant method
+    * Broyden's method
 * Differentation
-    * [Automatic differentiation via dual numbers](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/0e8b9d5150a734a67033548762a57e26f9725fe3/src/Differentiation.jl#L1)
+    * Automatic differentiation via dual numbers
 * Integration
-   * [Composite Simpson - One dim.](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/59ab2397869ecf563e8d3c41aeccc1210c2f3d1e/src/Integration.jl#L12)
-   * [Double Simpson - Two dim.](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/59ab2397869ecf563e8d3c41aeccc1210c2f3d1e/src/Integration.jl#L46)
-   * [WIP] [Monte Carlo Integration]()
+   * Composite Simpson - One dim.
+   * Double Simpson - Two dim.
+   * [WIP] Monte Carlo Integration
 * Random Number Generators (RNGs)
     * Pseudo-random numbers
-        * [Lagged Fibonacci generator](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/279a50635734098c8a72f3c3ca79393a69be4900/src/Random.jl#L3)
-        * [RANMAR](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/5d7a65acb540707fdd48adc60cf705841ae08efa/src/Random.jl#L32)
+        * Lagged Fibonacci generator
+        * RANMAR
     * [WIP] Quasi-random numbers
-        * [van der Corput sequences]()
-        * [Halton sequences]()
-        * [Faure sequences]()
-        * [WIP] [Sobol sequences]()
+        * van der Corput sequences
+        * Halton sequences
+        * Faure sequences
+        * [WIP] Sobol sequences
 
 * Statistical Tests
-    * [Wald–Wolfowitz runs test](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/9fe1ddeb3e6d17b9ef461a9142731296ee559a67/src/StatisticalTests.jl#L3)
+    * Wald–Wolfowitz runs test
 
 *Todo*
 * Optimization
