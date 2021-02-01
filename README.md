@@ -33,6 +33,8 @@ Currently implemented:
 
 *Todo*
 * Optimization
+* Differential Equations (ODEs)& Systems of diff. eqs.
+* Partial Differential Equations (PDEs)
 * Stochastic process & SDEs
 * ...
 * More comments & self-commenting code
