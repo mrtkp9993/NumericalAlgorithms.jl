@@ -101,6 +101,13 @@ end
     f2(x, y) = y^2 + x^3
     res = CalcDoubleIntegral(f2, a1, b1, c1, d1, m1, n1)
     @test res ≈ 0.783346 atol = 1e-6
+
+    an = [0,0,0]
+    bn = [1,1,1]
+    nn::UInt64 = 20000
+    f3(x, y, z) = x + exp(y) - sin(z)
+    res = CalcMonteCarloIntegral(f3, an, bn, nn)
+    @test res ≈ 1.75 atol = 1e-2
 end
 
 @testset "Random" begin
