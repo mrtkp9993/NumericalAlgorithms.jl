@@ -22,8 +22,8 @@ export C_SQRT1_2, C_SQRTPI, C_SQRT2PI
 export primes_1000
 export FindRoot1D, FindRootND
 export Dual
-export CalcSingleIntegral, CalcDoubleIntegral
-export LFG, RANMAR, vanderCorputSeq, haltonSeq, faureSeq
+export CalcSingleIntegral, CalcDoubleIntegral, CalcMonteCarloIntegral
+export LFG, RANMAR, vanderCorputSeq, haltonSeq, faureSeq, sobolSeq
 export RunsTest
 
 end # module

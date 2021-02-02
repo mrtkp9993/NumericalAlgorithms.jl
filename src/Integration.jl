@@ -80,3 +80,21 @@ function CalcDoubleIntegral(f::Function, a::Real, b::Real, c::Function, d::Funct
     println("Approximation to integral: $t")
     return t
 end
+
+function CalcMonteCarloIntegral(f::Function, an, bn, n::UInt64)
+    @assert length(an) == length(bn)
+    rndNums = zeros(n, length(an))
+    mult = 1
+    for i = 1:length(an)
+        ani = an[i]
+        bni = bn[i]
+        rndNums[:, i] = uniformSeq(ani, bni, n)
+        mult *= bni - ani
+    end
+    mult /= n
+    intt = 0
+    for j = 1:n
+        intt += f(rndNums[j,:]...)
+    end
+    mult * intt
+end

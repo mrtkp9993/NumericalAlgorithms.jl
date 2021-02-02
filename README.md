@@ -15,28 +15,28 @@ Install the package with ```add https://github.com/mrtkp9993/NumericalAlgorithms
 Currently implemented:
 
 * Root finding algorithms
-    * Secant method
-    * Broyden's method
+  * Secant method
+  * Broyden's method
 * Differentation
-    * Automatic differentiation via dual numbers
+  * Automatic differentiation via dual numbers
 * Integration
-   * Composite Simpson - One dim.
-   * Double Simpson - Two dim.
-   * [WIP] Monte Carlo Integration
+  * Composite Simpson - One dim.
+  * Double Simpson - Two dim.
+  * Monte Carlo Integration - Arbitrary dimension
 * Random Number Generators (RNGs)
-    * Pseudo-random numbers
-        * Lagged Fibonacci generator
-        * RANMAR
-    * [WIP] Quasi-random numbers
-        * van der Corput sequences
-        * Halton sequences
-        * Faure sequences
-        * [WIP] Sobol sequences
-
+  * Pseudo-random numbers
+    * Lagged Fibonacci generator
+    * RANMAR
+  * Quasi-random numbers
+    * van der Corput sequences
+    * Halton sequences
+    * Faure sequences
+    * Sobol sequences
 * Statistical Tests
-    * Wald–Wolfowitz runs test
+  * Wald–Wolfowitz runs test
 
-*Todo*
+## Next steps to do
+
 * Optimization
 * Differential Equations (ODEs)& Systems of diff. eqs.
 * Partial Differential Equations (PDEs)

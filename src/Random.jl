@@ -19,7 +19,7 @@ end
 "Constructor for LFG with default parameter values"
 LFG() = LFG(24, 55, 2^32, [rand(UInt) % 2^32 for i = 1:55], +)
 "Constructor for LFG with user supplied values, p, q, m"
-LFG(p, q, m) = LPG(p, q, m, [rand(UInt) % m for i = 1:q], +)
+LFG(p, q, m) = LFG(p, q, m, [rand(UInt) % m for i = 1:q], +)
 
 
 function Base.rand(rng::LFG)
@@ -111,4 +111,17 @@ function faureSeq(nb, m, b)
         end
     end
     bn
+end
+
+"Sobol sequence"
+function sobolSeq()
+    throw("not implemented yet")
+end
+
+"Generate n random numbers with uniform dist. in [a, b]"
+function uniformSeq(a, b, n)
+    rng1 = LFG(9739, 23209, 2^32 - 1)
+    rndNums = [rand(rng1) for i = 1:n]
+    rndNums = a .+ ((b - a) / (maximum(rndNums) - minimum(rndNums))) .* (rndNums .- minimum(rndNums))
+    rndNums
 end
