@@ -32,23 +32,9 @@ Currently implemented:
     * Halton sequences
     * Faure sequences
     * Sobol sequences
+* Markov Chain Monte Carlo (MCMC) for sampling from arbitrary distributions
 * Statistical Tests
   * Wald–Wolfowitz runs test
-
-## Next steps to do
-
-* Optimization
-* Differential Equations (ODEs)& Systems of diff. eqs.
-* Partial Differential Equations (PDEs)
-* Stochastic process & SDEs
-* ...
-* More comments & self-commenting code
-
-## Visual tests for RNGs
-
-![lfg1000](figs/lfg_test_1000.png)
-
-![ranmar1000](figs/ranmar_test_1000.png)
 
 ## License
 
