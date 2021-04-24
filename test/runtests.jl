@@ -156,3 +156,11 @@ end
     z2 = round(z2, digits=2)
     @test -2.58 < z1 < 2.58    
 end
+
+@testset "Markov Chain Monte Carlo" begin
+    f(x::Float64)::Float64 = x < 0 ? 0 : exp(-x)
+    a::UInt64 = 10000
+    b::UInt64 = 2500
+    res = MCMC(f, a, b)
+    @test length(res) == a
+end
