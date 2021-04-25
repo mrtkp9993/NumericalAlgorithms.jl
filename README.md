@@ -32,7 +32,7 @@ Currently implemented:
     * Halton sequences
     * Faure sequences
     * Sobol sequences
-* Markov Chain Monte Carlo (MCMC) for sampling from arbitrary distributions
+* Markov Chain Monte Carlo (MCMC) for sampling
 * Statistical Tests
   * Wald–Wolfowitz runs test
 
