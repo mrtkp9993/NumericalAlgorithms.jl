@@ -107,7 +107,7 @@ end
     nn::UInt64 = 20000
     f3(x, y, z) = x + exp(y) - sin(z)
     res = CalcMonteCarloIntegral(f3, an, bn, nn)
-    @test res ≈ 1.75 atol = 1e-2
+    @test res ≈ 1.75 atol = 1e-1
 end
 
 @testset "Random" begin

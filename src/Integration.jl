@@ -1,3 +1,5 @@
+include("Distributions.jl")
+
 """
     CalcSingleIntegral(f::Function, a::Real, b::Real, n::UInt64)
 
@@ -88,7 +90,7 @@ function CalcMonteCarloIntegral(f::Function, an, bn, n::UInt64)
     for i = 1:length(an)
         ani = an[i]
         bni = bn[i]
-        rndNums[:, i] = uniformSeq(ani, bni, n)
+        rndNums[:, i] = runif(UniformDistribution(ani, bni), n)
         mult *= bni - ani
     end
     mult /= n
