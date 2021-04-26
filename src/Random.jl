@@ -117,11 +117,3 @@ end
 function sobolSeq()
     throw("not implemented yet")
 end
-
-"Generate n random numbers with uniform dist. in [a, b]"
-function uniformSeq(a, b, n)
-    rng1 = LFG(9739, 23209, 2^32 - 1)
-    rndNums = [rand(rng1) for i = 1:n]
-    rndNums = a .+ ((b - a) / (maximum(rndNums) - minimum(rndNums))) .* (rndNums .- minimum(rndNums))
-    rndNums
-end

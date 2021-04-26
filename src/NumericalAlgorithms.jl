@@ -11,6 +11,7 @@ module NumericalAlgorithms
 
 include("Constants.jl")
 include("Differentiation.jl")
+include("Distributions.jl")
 include("Integration.jl")
 include("MCMC.jl")
 include("Random.jl")
@@ -27,5 +28,6 @@ export CalcSingleIntegral, CalcDoubleIntegral, CalcMonteCarloIntegral
 export LFG, RANMAR, vanderCorputSeq, haltonSeq, faureSeq, sobolSeq
 export RunsTest
 export MCMC
+export UniformDistribution, punif, runif
 
 end # module

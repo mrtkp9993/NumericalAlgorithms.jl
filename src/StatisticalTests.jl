@@ -38,3 +38,7 @@ function RunsTest(rndNums)
     zscore = (nrun - mu) / sigmasqr
     return zscore
 end
+
+function chisq_test_for_uniformity(rndNums)
+    throw("Not implemented yet")
+end
