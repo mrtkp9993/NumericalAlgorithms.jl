@@ -1,5 +1,10 @@
+**DEPRECATED: I'm giving up with Julia and I'll implement similar algorithms in another language. If you want to develop further, please fork this repository.**
+
+---
+
 # NumericalAlgorithms.jl
 
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 ![CI](https://github.com/mrtkp9993/NumericalAlgorithms.jl/workflows/CI/badge.svg)
 [![codecov](https://codecov.io/gh/mrtkp9993/NumericalAlgorithms.jl/branch/main/graph/badge.svg?token=7MBMLCFILV)](https://codecov.io/gh/mrtkp9993/NumericalAlgorithms.jl)
 [![GitHub license](https://img.shields.io/github/license/mrtkp9993/NumericalAlgorithms.jl)](https://github.com/mrtkp9993/NumericalAlgorithms.jl/blob/main/LICENSE)
