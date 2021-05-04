@@ -1,5 +1,12 @@
 **DEPRECATED: I'm giving up with Julia and I'll implement similar algorithms in another language. If you want to develop further, please fork this repository.**
 
+Why I gave up with Julia:
+
+1. Lack of OOP
+2. Lack of static type checking: most errors were encountered in runtime
+3. Unreadable library source codes (due to lack of OOP and type system) 
+4. ...
+
 ---
 
 # NumericalAlgorithms.jl
